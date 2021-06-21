@@ -9,33 +9,13 @@
 
 		body {
 			touch-action: none;
-			margin: 200;
+			margin: 0;
 			border: 0 none;
 			padding: 0;
 			text-align: center;
 			background-color: black;
 		}
-		
-		#inner {  
-   width: 50%;
-}
 
-#outer {
-  width: 100%;
-  /* Firefox */
-  display: -moz-box;
-  -moz-box-pack: center;
-  -moz-box-align: center;
-  /* Safari and Chrome */
-  display: -webkit-box;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  /* W3C */
-  display: box;
-  box-pack: center;
-  box-align: center;
-}
-		
 		#canvas {
 			display: block;
 			margin: 0;
@@ -60,8 +40,8 @@
 		 * ============== */
 
 		#status {
-			/*position: absolute;*/
-			left: center;
+			position: absolute;
+			left: 0;
 			top: 0;
 			right: 0;
 			bottom: 0;
@@ -75,7 +55,7 @@
 		#status-progress {
 			width: 366px;
 			height: 7px;
-			background-color: #FFFFFF;
+			background-color: #38363A;
 			border: 1px solid #444246;
 			padding: 1px;
 			box-shadow: 0 0 2px 1px #1B1C22;
@@ -139,8 +119,6 @@
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
-	<div id="outer">
-  <div id="inner">
 	<div id='status'>
 		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
 		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>
@@ -155,12 +133,11 @@
 		</div>
 		<div id='status-notice' class='godot' style='display: none;'></div>
 	</div>
-</div>
-</div>
-	<script type='text/javascript' src='p.js'></script>
+
+	<script type='text/javascript' src='.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"p","experimentalVK":false,"fileSizes":{"p.pck":1359296,"p.wasm":12660493},"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"","experimentalVK":false,"fileSizes":{".pck":1359296,".wasm":12660493},"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
